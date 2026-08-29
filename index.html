@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>爱情公寓 入住登记</title>
+  <meta name="description" content="用几分钟回答十六道生活问卷，生成一份专属于你的公寓住户档案。。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <script type="module" crossorigin src="/assets/index-DJPcFsNT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CfHrqkKq.css">
+</head>
+<body>
+  <div id="app">
+    <audio id="bgm-player" preload="auto" aria-hidden="true"></audio>
+    <!-- 首页 -->
+    <section id="page-intro" class="page active">
+      <div class="intro-card">
+        <div class="nameplate">
+          <span class="rivet top-left" aria-hidden="true"></span>
+          <span class="rivet top-right" aria-hidden="true"></span>
+          <span class="rivet bottom-left" aria-hidden="true"></span>
+          <span class="rivet bottom-right" aria-hidden="true"></span>
+          <p class="intro-eyebrow">SBTI APARTMENT · 2026</p>
+          <h1 class="intro-title">公寓入住登记</h1>
+          <h2 class="intro-subtitle">完成登记，领取你的住户身份</h2>
+          <p class="intro-description">用几分钟回答十六道生活问卷，生成一份专属于你的公寓住户档案。</p>
+          <div class="plate-rule" aria-hidden="true"></div>
+          <button id="btn-start" class="btn btn-primary">办理入住登记</button>
+          <p class="intro-credit">粉丝二创娱乐内容 · 非官方出品</p>
+          <p class="intro-note">门牌已擦亮，等待新住户……</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 答题页 -->
+    <section id="page-quiz" class="page">
+      <div class="card quiz-card">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text" id="progress-text">0 / 16</div>
+        <div class="question-area">
+          <p class="question-text" id="question-text"></p>
+        </div>
+        <div class="options" id="options"></div>
+      </div>
+    </section>
+
+    <!-- 结果页 -->
+    <section id="page-result" class="page">
+      <div class="card result-card" id="result-card">
+        <div class="result-kicker" id="result-kicker">你的主类型</div>
+        <img class="result-image" id="result-image" alt="" hidden />
+        <div class="result-name" id="result-name"></div>
+        <div class="result-badge" id="result-badge"></div>
+        <div class="result-intro" id="result-intro"></div>
+        <div class="result-desc" id="result-desc"></div>
+
+        <div class="result-secondary" id="result-secondary" style="display:none">
+          <div class="secondary-label">次要匹配</div>
+          <div class="secondary-info" id="secondary-info"></div>
+        </div>
+
+        <h3 class="section-title">四维度评分</h3>
+        <canvas id="radar-chart" width="320" height="320"></canvas>
+        <div class="dimensions-detail" id="dimensions-detail"></div>
+
+        <div class="result-top3">
+          <h3 class="section-title">最佳匹配 TOP 5</h3>
+          <div id="top-list"></div>
+        </div>
+
+        <div class="disclaimer" id="disclaimer"></div>
+
+        <div class="result-actions">
+          <button id="btn-download" class="btn btn-primary">保存分享图片</button>
+          <button id="btn-restart" class="btn btn-secondary">重新测试</button>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
